@@ -224,6 +224,8 @@ void deleteListEnd() {
         tail = tmp;
         tail -> next = NULL;
     }
+
+    cout << "Last node deleted.";
 };
 
 void deleteListPosition() {
