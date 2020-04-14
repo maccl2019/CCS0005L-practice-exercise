@@ -17,6 +17,7 @@
 using namespace std;
 
 int main() {
+    
     /* Variable initialization */
 
     int highest = 0;
@@ -36,7 +37,6 @@ int main() {
 
     /* Determination algorithm */
 
-
     // Highest number
     for(int i = 0; i < 10; i++) {
         if(highest < array[i]) highest = array[i];
@@ -50,6 +50,11 @@ int main() {
         if(secondHighest < array[i] && array[i] != highest) secondHighest = array[i];
         if(lowest > array[i]) lowest = array[i];
         if(secondLowest > array[i] && array[i] != lowest) secondLowest = array[i];
+    }
+
+    if(highest == secondLowest) {
+        // Special case: if there is no unique numbers in the array
+        lowest = secondHighest = highest;
     }
 
     /* Output handling */
