@@ -11,7 +11,6 @@
 using namespace std;
 
 int main() {
-
     /* Variable initialization */
 
     // Integer array to sort from

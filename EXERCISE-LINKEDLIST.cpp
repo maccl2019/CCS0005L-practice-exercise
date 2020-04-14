@@ -28,9 +28,7 @@ void sortList();
 void displayList();
 
 int main() {
-
     while(true) {
-
         cout << "1. Create a list" << endl;
         cout << "2. Add at beginning" << endl;
         cout << "3. Add at a specific node" << endl;
@@ -89,14 +87,12 @@ int main() {
         
         cout << endl;
         system("pause && cls");
-
     }
 
     return 0;
 }
 
 void createList() {
-
     if(head != NULL) {
         cout << "Note: You already have a list defined." << endl;
         cout << "We'll just append this list to your current list." << endl;
@@ -141,7 +137,6 @@ void createList() {
 };
 
 void addListBeginning() {
-
     int nodeData;
     cout << "Enter the data for the node to be inserted at the beginning (int) > ";
     cin >> nodeData;
@@ -157,11 +152,9 @@ void addListBeginning() {
     head -> next = p;
 
     cout << "Node added to the beginning of the list.";
-
 };
 
 void addListPosition() {
-
     displayList();
 
     int nodePos;
@@ -206,7 +199,6 @@ void addListPosition() {
 };
 
 void deleteListBeginning() {
-
     if(!head -> next) {
         head = NULL;
     } else {
@@ -235,7 +227,6 @@ void deleteListEnd() {
 };
 
 void deleteListPosition() {
-
     displayList();
 
     int nodePos;
@@ -271,7 +262,6 @@ void deleteListPosition() {
 };
 
 void reverseList() {
-    
     Node *ptr = NULL, *lastptr = NULL, *temp = NULL;
     Node *newHead = NULL, *newTail = NULL;
 
@@ -298,14 +288,12 @@ void reverseList() {
 };
 
 void sortList() {
-    
     Node *ptr2, *ptr, *tmp;
     Node *newHead = NULL, *newTail = NULL;
 
     ptr2 = head;
 
     while(ptr2 != NULL) {
-
         ptr = new Node;
         ptr -> data = ptr2 -> data;
         ptr -> next = NULL;
@@ -319,11 +307,9 @@ void sortList() {
                 tmp -> next -> data < ptr -> data) {
                 tmp = tmp -> next;
             }
-
             ptr -> next = tmp -> next;
             tmp -> next = ptr;
         }
-
 
         if(ptr2 -> next == NULL) newTail = ptr2;
         ptr2 = ptr2 -> next;
@@ -337,7 +323,6 @@ void sortList() {
 };
 
 void displayList() {
-        
     Node *ptr = head;
     int pos = 0;
 

@@ -17,7 +17,6 @@
 using namespace std;
 
 int main() {
-    
     /* Variable initialization */
 
     int highest = 0;

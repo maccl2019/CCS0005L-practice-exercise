@@ -11,7 +11,6 @@
 using namespace std;
 
 int main() {
-    
     /* Variable initialization */
     char input[255] = "";
     bool isPalindrome = true;

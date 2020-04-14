@@ -14,7 +14,6 @@
 using namespace std;
 
 int main() {
-    
     /* Variable initialization */
 
     // Integer to convert to
