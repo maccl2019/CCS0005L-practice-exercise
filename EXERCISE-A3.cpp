@@ -48,7 +48,12 @@ int main() {
     // Second highest, lowest, and second lowest number
     for(int i = 0; i < 10; i++) {
         if(secondHighest < array[i] && array[i] != highest) secondHighest = array[i];
-        if(lowest > array[i]) lowest = array[i];
+        
+        if(lowest > array[i]) {
+            secondLowest = lowest;
+            lowest = array[i];
+        }
+        
         if(secondLowest > array[i] && array[i] != lowest) secondLowest = array[i];
     }
 
